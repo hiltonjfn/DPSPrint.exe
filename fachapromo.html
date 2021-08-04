@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fachapromo.css">
+</head>
+<body onload="imgp()">
+    <header>
+        <p style="display: inline-block;">Selecione a promoção</p>
+        <select onclick="imgp()" name="" id="promo">
+            <option value="0">Leve 4 pague 3</option>
+            <option value="1">Leve 3 pague 2</option>
+            <option value="2">Leve 2 pague 1</option>
+            <option value="5">ePharma</option>
+            <option value="3">Funcional</option>
+            <option value="4">Logix farma</option>
+            
+        </select>
+        <input type="button" value="imprimir" onClick="window.print()"/>
+    </header>
+
+    <main id="corpo">
+        
+    
+    </main>
+    
+    
+    
+    
+    
+
+    <script>
+        var c=1
+        function deletar(){  
+        var c=1
+        while (c <= 5){
+        var div = window.document.getElementById(`${c}`)
+        div.remove()
+        c++
+        }
+        }
+
+        function imgp(){
+            var promo = window.document.getElementById("promo")
+            var corpo = window.document.getElementById('corpo')
+            var promo = Number(promo.value)
+            var contagem = window.document.getElementById(`${c}`)
+            var div = window.document.getElementById(`${c}`)
+            var c=1
+            
+           
+
+            switch (promo) {
+                case 0 :   
+                while (c <= 5){
+                     corpo.innerHTML = `<div id="1" class="corpo" ><img src="4x3.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="2" class="corpo" ><img src="4x3.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="2" class="corpo" ><img src="4x3.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="2" class="corpo" ><img src="4x3.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="2" class="corpo" ><img src="4x3.png" alt=""></div>`
+                    c++}
+                    break
+
+                case 1 :   
+                while (c <= 5){
+                     corpo.innerHTML = `<div id="${c}" class="corpo" ><img src="3x2.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="3x2.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="3x2.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="3x2.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="3x2.png" alt=""></div>`
+                    c++}
+                    break
+                case 2 : while (c <= 5){
+                     corpo.innerHTML = `<div id="${c}" class="corpo" ><img src="2x1.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="2x1.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="2x1.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="2x1.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="2x1.png" alt=""></div>`
+                    c++}
+                    break
+                case 3 : while (c <= 5){
+                     corpo.innerHTML = `<div id="${c}" class="corpo" ><img src="funcional.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="funcional.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="funcional.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="funcional.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="funcional.png" alt=""></div>`
+                    c++}
+                    break
+                case 4 : while (c <= 5){
+                     corpo.innerHTML = `<div id="${c}" class="corpo" ><img src="logix.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="logix.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="logix.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="logix.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="logix.png" alt=""></div>`
+                    c++}
+                    break
+                case 5 : while (c <= 5){
+                     corpo.innerHTML = `<div id="${c}" class="corpo" ><img src="epharma.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="epharma.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="epharma.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="epharma.png" alt=""></div><hr>`
+                     corpo.innerHTML += `<div id="${c}" class="corpo" ><img src="epharma.png" alt=""></div>`
+                    c++}
+                    break
+                
+                    
+        
+                
+            }
+        }
+    </script>
+</body>
+</html>

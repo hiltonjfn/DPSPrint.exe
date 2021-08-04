@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <link rel="stylesheet" href="bularapida.css">
+    </head>
+</head>
+
+<body>
+    <select onclick="pesquisa()" id="estado">  
+        <option value="Nulo">Pesquise o nome do medicamento</option>
+          <option value="Abilify">Abilify</option>
+          <option value="Abilify">Aipr</option>
+          <option value="Akineton">Akineton</option>
+          <option value="Amoxil">Amox-Ems</option>
+          <option value="Amoxil">Amoxadene</option>
+          <option value="Amoxil">Amoxil</option>
+          <option value="Amoxil">Amoxil BD</option>
+          <option value="Amoxil">Amoxicilina</option>
+          <option value="Amoxil">Amoximed</option>
+          <option value="Amoxil">Amoxina</option>
+          <option value="Amplacilina">Ampicilab</option>
+          <option value="Amplacilina">Ampicilina</option>
+          <option value="Amplictil">Amplictil</option>
+          <option value="Amplacilina">Amplacilina</option>
+          <option value="Arava">Arava</option>
+          <option value="Arcoxia">Arcoxia</option>
+          <option value="Abilify">Aripiprazol</option>
+          <option value="Abilify">Aristab</option>
+          <option value="Aropax">Aropax</option>
+          <option value="Arava">Artgran</option>
+          <option value="Amoxil">Atak</option>
+          <option value="Aubagio">Aubagio</option>
+          <option value="Aropax">Cebrilin</option>
+          <option value="Akineton">Cloridrato de biperideno</option>
+          <option value="Amplictil">Cloridrato de clorpromazina</option> 
+          <option value="Amplictil">Clorpromaz</option>
+          <option value="Abilify">Confilify</option>
+          <option value="Aropax">Depaxan</option>
+          <option value="Aropax">Depond</option>
+          <option value="Amoxil">Duzimicin</option>  
+          <option value="Arcoxia">Etoricoxibe</option>
+          <option value="Aropax">Haliprex</option>       
+          <option value="Abilify">Harip</option>
+          <option value="Arcoxia">Hetori</option> 
+          <option value="Amoxil">Hincomox</option>
+          <option value="Abilify">Kavium</option>
+          <option value="Arava">Leflun</option>
+          <option value="Arava">Leflunomida</option>
+          <option value="Arava">Lemida</option>
+          <option value="Arava">LFM-Leflunomida</option>
+          <option value="Amoxil">Linamox</option>
+          <option value="Amplacilina">Linapicil</option>
+          <option value="Amplictil">Longactil</option>
+          <option value="Aropax">Moratus</option>   
+          <option value="Amoxil ">Nemoxil </option>
+          <option value="Amplacilina">Neo Ampicilin</option>
+          <option value="Amoxil">Neo Moxilin</option>
+          <option value="Amoxil">Novocilin</option>
+          <option value="Amoxil">Ocylin</option> 
+          <option value="Aropax">Parox</option>   
+          <option value="Aropax">Paroxiliv</option> 
+          <option value="Aropax">Paxtrat</option> 
+          <option value="Amoxil">Polimoxil</option>
+          <option value="Aropax">Praxetina</option> 
+          <option value="Akineton">Propark</option>
+          <option value="Arava">Reumian</option>
+          <option value="Aropax">Roxetin</option> 
+          <option value="Aubagio">Ryfluna</option>
+          <option value="Abilify">Sensaz</option>
+          <option value="Aropax">Seroblock</option> 
+          <option value="Aropax">Sertero</option> 
+          <option value="Amoxil">Sinot</option>
+          <option value="Aubagio">Teriflunomida</option>
+          <option value="Amplacilina">Teuplafec</option>
+          <option value="Abilify">Toarip</option>
+          <option value="Amoxil">Uni Amox</option>
+          <option value="Amoxil">Velamox</option>
+          <option value="Amoxil">Velamox BD</option>
+          <option value="Aropax">Zyparox</option> 
+          <option value="?">?</option>
+          </select>
+    <input onclick="pesquisa()" type="button" value="Pesquisar">
+    <div id="lista"></div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('#estado').select2();
+        });
+        function pesquisa() {
+            var med = window.document.getElementById("estado")
+            var medicamento = String(med.value)
+            var res = window.document.getElementById("lista")
+
+            switch (medicamento) {
+                case "Abilify": res.innerHTML = `
+                <div>
+                <h1> Abilify (Aripiprazol)</h1>
+                <h2>Medicamento controlado</h2> 
+                <p>Medicamento da lista C1 classe: Psicolépticos</p>
+                <h2>Indicações terapêuticas</h2>
+                <p>Aripiprazol é indicado para o tratamento da esquizofrenia em adultos e em adolescentes de idade igual ou superior a 15 anos.<br>
+                Aripiprazol é indicado para o tratamento do episódio maníaco moderado a grave na perturbação
+                bipolar I e para a prevenção de novos episódios maníacos em adultos que experimentaram
+                predominantemente episódios maníacos e em que o episódio maníaco respondeu ao tratamento
+                com aripiprazol.<br>
+                Aripiprazol é indicado para o tratamento até às 12 semanas do episódio maníaco moderado a
+                grave na perturbação bipolar I em adolescentes de idade igual ou superior a 13 anos.
+                </p>
+                <h2>Advertências e precauções especiais de utilização</h2>
+                <p>Durante o tratamento com antipsicóticos podem ser necessários vários dias até algumas semanas
+                para a melhoria da situação clínica do doente. Os doentes devem ser cuidadosamente monitorizados durante todo este período.</p>
+                
+                </div>
+                
+                <ul> 
+                <h1>Referência : Similar</h1>
+                <p>COMPRIMIDO SIMPLES</p>
+                <li>Abilify 10mg = Aipri 10mg
+                <li>Abilify 10mg = Confilify 10mg
+                <li>Abilify 10mg = Harip 10mg
+                <li>Abilify 10mg = Kavium 10mg
+                <li>Abilify 10mg = Sensaz 10mg
+                <li>Abilify 10mg = Toarip 10mg              
+                </ul>
+                <ul>
+                <li>Abilify 15mg = Aipri 15mg 
+                <li>Abilify 15mg = Aristab 15mg
+                <li>Abilify 15mg = Confilify 15mg
+                <li>Abilify 15mg = Harip 15mg
+                <li>Abilify 15mg = Kavium 15mg
+                <li>Abilify 15mg = Sensaz 15mg
+                <li>Abilify 15mg = Toarip 15mg
+                </ul>
+                <ul>
+                <li>Abilify 20mg = Aristab 20mg               
+                <li>Abilify 20mg = Confilify 20mg
+                <li>Abilify 20mg = Toarip 20mg
+                <li>Abilify 20mg = Harip 20mg
+                </ul>
+                <ul>      
+                <li>Abilify 30mg = Harip 30mg
+                <li>Abilify 30mg = Aristab 30mg
+                <li>Abilify 30mg = Toarip 30mg
+                </ul>
+                `
+                    break
+                case "Akineton": res.innerHTML = `
+                <div>
+                <h1> Akineton (Cloridrato de biperideno)</h1>
+                <h2>Medicamento controlado</h2> 
+                <p>Medicamento da lista C1 Classe terapêutica: Antiparkinsonianos</p>
+                <h2>Indicações do medicamento</h2>
+                <p>Cloridrato de biperideno é indicado para:
+                Síndrome parkinsoniana, especialmente para controlar sintomas de rigidez e tremor; sintomas extrapiramidais como contorções (torções) musculares agudas, sensação de tremor muscular, inquietação motora e síndromes parkinsonianas induzidas por medicamentos neurolépticos e outros medicamentos similares.</p>
+                <h2>Contra-indicações </h2>
+                <p>Cloridrato de biperideno é contra-indicado a pacientes com hipersensibilidade ao biperideno ou a qualquer um dos excipientes da fórmula. AKINETON® (cloridrato de biperideno) é contra-indicado para pacientes portadores de glaucoma de ângulo estreito, estenose ou obstrução mecânica do trato gastrintestinal e megacólon.(<strong>Não há contra-indicação relativa a faixas etárias.</strong>)</p>
+                </div>
+
+                <ul>
+                 <h1>Referência : Similar</h1>
+                <li>Akineton 2mg = Propark 2mg
+                </ul>`
+                    break
+                case "Amoxil": res.innerHTML =
+                    ` <div>
+                <h1> Amoxil (amoxicilina)</h1>
+                <h2>Medicamento antibiótico</h2>
+
+                <p>Medicamento só deve ser vendido com retenção de receita.
+                <strong>Classe:</strong> Penicilina Ação: Tem rápida ação bactericida, interferindo na parede celular das bactérias</p>
+                <h2>Como este medicamento funciona?</h2>
+                <p>
+                Amoxil contém uma penicilina chamada amoxicilina como ingrediente ativo. A amoxicilina pertence ao
+                grupo dos antibióticos penicilânicos. Amoxil é usado para o tratamento de uma gama de infecções causadas
+                por bactérias. Podem ser infecções de pulmões (pneumonia e bronquite), amígdalas (amigdalite), seios da face
+                (sinusite), trato urinário e genital, pele e mucosas. Amoxil atua destruindo as bactérias que causam essas
+                infecções. </p> 
+                <h2>Por que este medicamento foi indicado?</h2>
+                <p>Amoxil é um antibiótico eficaz contra uma grande variedade de bactérias, sendo indicado para o tratamento
+                de infecções bacterianas causadas por germes sensíveis à ação da amoxicilina. Entretanto, seu médico pode
+                receitar este medicamento para outro uso. Se desejar saber mais informações, pergunte a seu médico.
+                Amoxil também pode ser usado para prevenir infecções.</p>
+
+                </div>
+
+                <ul><h1>Referência : Similar</h1>
+                <h4>Cápsulas de 500 mg</h4>
+                <li>Amoxil 500mg = Amoxadene 500mg
+                <li>Amoxil 500mg = Amox-Ems 500mg
+                <li>Amoxil 500mg = Amoximed 500mg
+                <li>Amoxil 500mg = Amoxina 500mg   
+                <li>Amoxil 500mg = Duzimicin 500mg 
+                <li>Amoxil 500mg = Nemoxil 500mg    
+                <li>Amoxil 500mg = Neo Moxilin 500mg
+                <li>Amoxil 500mg = Novocilin 500mg 
+                <li>Amoxil 500mg = Ocylin 500mg  
+                <li>Amoxil 500mg = Polimoxil 500mg 
+                <li>Amoxil 500mg = Uni Amox 500mg
+                </ul>
+                <ul>
+                <h4>Cápsulas de 875 mg</h4>
+                <li>Amoxil 875mg = Sinot 875mg    
+                </ul>
+                <ul>
+                <h4>Pó para suspensão oral 125mg/5ml</h4>
+                <li>Amoxil 125mg/5ml = Amoxadene 125mg/5ml
+                <li>Amoxil 125mg/5ml = Duzimicin 125mg/5ml
+                <li>Amoxil 125mg/5ml = Hincomox 125mg/5ml   
+                </ul>
+                <ul>
+                <h4>Pó para suspensão oral 250mg/5ml</h4>
+                <li>Amoxil 250mg/5ml = Amox-Ems 250mg/5ml           
+                <li>Amoxil 250mg/5ml = Amoxadene 250mg/5ml               
+                <li>Amoxil 250mg/5ml = Amoximed 250mg/5ml
+                <li>Amoxil 250mg/5ml = Amoxina 250mg/5ml
+                <li>Amoxil 250mg/5ml = Atak 250mg/5ml
+                <li>Amoxil 250mg/5ml = Linamox 250mg/5ml
+                <li>Amoxil 250mg/5ml = Nemoxil 250mg/5ml
+                <li>Amoxil 250mg/5ml = Neo Moxilin 250mg/5ml
+                <li>Amoxil 250mg/5ml = Ocylin 250mg/5ml
+                <li>Amoxil 250mg/5ml = Polimoxil 250mg/5ml
+                <li>Amoxil 250mg/5ml = Sinot 250mg/5ml
+                <li>Amoxil 250mg/5ml = Uni Amox 250mg/5ml
+                <li>Amoxil 250mg/5ml = Velamox 250mg/5ml
+                <li>Amoxil 250mg/5ml = Novocilin 250mg/5ml
+                </ul>
+                <ul>           
+                <h4>Pó para suspensão oral 400mg/5ml</h4>
+                <li>Amoxil 400mg/5ml = Atak 400mg/5ml
+                <li>Amoxil 400mg/5ml = Linamox 400mg/5ml
+                <li>Amoxil 400mg/5ml = Sinot 400mg/5ml              
+                </ul>
+                <ul>
+                <h4>Pó para suspensão oral 500mg/5ml</h4>
+                <li>Amoxil 500mg/ml = Amox-Ems 500mg/ml
+                <li>Amoxil 500mg/5ml = Atak 500mg/5ml
+                <li>Amoxil 500mg/5ml = Linamox 500mg/5ml
+                <li>Amoxil 500mg/5ml = Novocilin 500mg/5ml
+                <li>Amoxil 500mg/5ml = Ocylin 500mg/5ml
+                <li>Amoxil 500mg/5ml = Polimoxil 500mg/5ml
+                <li>Amoxil 500mg/5ml = Sinot 500mg/5ml
+                <li>Amoxil 500mg/5ml = Uni Amox 500mg/5ml
+                <li>Amoxil 500mg/5ml = Velamox 500mg/5ml
+                </ul>
+                <ul>
+                <h4>Cápsulas de 875 mg</h4>
+                <li>Amoxil BD 875mg = Atak 875mg
+                <li>Amoxil BD 875mg = Linamox 875mg
+                <li>Amoxil BD 875mg = Novocilin 875mg
+                <li>Amoxil BD 875mg = Velamox BD 875mg
+                </ul>
+                <ul>
+                <h4>Pó para suspensão oral 400mg/5ml</h4>
+                <li>Amoxil BD 400mg/ml = Novocilin 400mg/ml
+                </ul>
+                <ul>
+                <h4>Pó para suspensão oral 80mg/ml</h4>
+                <li>Amoxil BD 80mg/ml = Velamox BD 80mg/ml
+                </ul>
+                
+                `
+                    break
+                case "Amplacilina": res.innerHTML = `
+                <div>
+                <h1> Amplacilina (Ampicilina)</h1>
+                <h2>Medicamento antibiótico</h2> 
+                <p>Medicamento antibiótico Classe: Penicilinas</p>
+                <h2>Indicações</h2>
+                <p>Ampicilina está indicada no tratamento de infecções causadas por microrganismos sensíveis à ampicilina, tais como infecções do trato urinário, respiratório, digestivo e biliar. Infecções localizadas ou sistêmicas especialmente as causadas por microrganismos do grupo esterococos, infecções por bacilos gram-negativos como Neisseria gonorrhoeae, Neisseria meningitidis, Haemophilus, Shigella, Salmonella e E. coli. Também indicada nas infecções bucais, extrações infectadas e outras intervenções cirúrgicas.</p>
+                
+                <h2>Contra-indicações</h2>
+                <p>Ampicilina é contraindicada para pacientes com história de reações de hipersensibilidade às penicilinas e/ou demais componentes da formulação. Não deve ser administrada a pacientes sensíveis às cefalosporinas devido a ocorrência de reação alérgica cruzada.</p>
+                </div>               
+                 <h1>Referência : Similar</h1>
+                <ul>
+                <h4>Cápsula gelatinosa dura 500mg</h4>
+                <li>Amplacilina 500mg = Ampicilab 500mg
+                <li>Amplacilina 500mg = Neo Ampicilin 500mg
+                <li>Amplacilina 500mg = Teuplafec 500mg
+                </ul>
+                <ul>
+                <h4>Pó estéril para solução injetável 1g</h4>
+                <li>Amplacilina 1g = Teuplafec 1g
+                </ul>
+                <ul>
+                <h4>Pó para Suspensão Oral 250mg/5ml</h4>
+                <li>Amplacilina 250mg/5ml = Ampicilab 250mg/5ml
+                <li>Amplacilina 250mg/5ml = Neo Ampicilin 250mg/5ml
+                </ul>
+                <ul>
+                <h4>Pó para Suspensão Oral 50mg/ml</h4>
+                <li>Amplacilina 50mg/ml = Linapicil 50mg/ml
+                </ul>`
+                    break
+                case "Amplictil": res.innerHTML = `
+                <div>
+                <h1> Amplictil (Cloridrato de clorpromazina)</h1>
+                <h2>Medicamento controlado</h2> 
+                <p>Medicamento da lista C1 Classe terapêutica: Antipsicótico</p>
+                <h2>Indicações do medicamento</h2>
+                <p>Este medicamento é destinado ao tratamento de: quadros psiquiátricos agudos, ou então no controle de psicoses de longa evolução.<br>
+                Cloridrato de clorpromazina também é indicado em manifestação de ansiedade e agitação, soluços incoercíveis (soluço que não para), náuseas (enjoo) e vômitos e neurotoxicoses (aceleração da respiração e convulsão com os olhos dilatados) infantis; também pode ser associado aos barbitúricos (medicamento depressor do sistema nervoso central) no tratamento do tétano.<br>
+                Em analgesia (elimina ou diminui a dor) obstétrica e no tratamento da eclampsia (séria complicação da gravidez caracterizada por convulsões), e nos casos em que haja necessidade de uma ação neuroléptica (diminui a excitação e a agitação), vagolítica (interrupção dos impulsos transmitidos pelo nervo vago), simpatolítica (efeito oposto à atividade produzida pelo estímulo do sistema nervoso simpático), sedativa (diminui a ansiedade e tem efeito calmante) ou antiemética (diminui o enjoo e vômito).</p>
+                </div>
+
+                <ul>
+                 <h1>Referência : Similar</h1>
+                <h4>solução injetável 5mg/ml</h4>
+                <li>Amplictil 5mg/ml = Clorpromaz 5mg/ml
+                <li>Amplictil 5mg/ml = Longactil 5mg/ml
+                </ul>
+                <ul>
+                <h4>Comprimido revestido 100mg</h4>
+                <li>Amplictil 100mg = Clorpromaz 100mg
+                </ul>
+                <ul>
+                <h4>Solução oral 40mg/ml</h4>
+                <li>Amplictil 40mg/ml = Longactil 40mg/ml
+                </ul>                        
+                `
+                    break
+                case "Arava": res.innerHTML = `
+                <div>
+                <h1> Arava (Leflunomida)</h1>
+                <h2>Medicamento controlado</h2> 
+                <p>Medicamento da lista C1 Classe terapêutica: Artrite E Artrose</p>
+                <h2>Indicações do medicamento</h2>
+                <p>Leflunomida é indicado para o tratamento da artrite reumatoide ativa (inflamação crônica das articulações), reduzindo os sinais e sintomas, inibindo a destruição das articulações e melhorando as funções físicas e de saúde relacionadas à qualidade de vida. Leflunomida é também indicado para o tratamento da artrite psoriática ativa (doença inflamatória que afeta uma parte dos pacientes que sofrem de psoríase crônica na pele).</p>
+                <h2>Contra-indicações </h2>
+                <p>Leflunomida é contraindicado em pacientes que apresentam alergia ou intolerância à leflunomida, teriflunomida ou a qualquer um dos componentes da fórmula. Contraindicado também para mulheres grávidas ou que estejam no período fértil e não utilizem métodos contraceptivos confiáveis e seguros ou que após o tratamento estejam com concentração do metabólito ativo de leflunomida acima de 0,02 mg/L. A possibilidade de estar grávida deve ser excluída antes de iniciar o tratamento. Em casos de dúvidas, converse com o seu médico.</p>
+                </div>
+
+                <ul>
+                <h1>Referência : Similar</h1>
+                <h4>comprimido revestido 100mg</h4>
+                <li>Arava 100mg = Artgran 100mg
+                <li>Arava 100mg = Lemida 100mg
+                </ul>
+                <ul>
+                <h4>comprimido revestido 20mg</h4>
+                <li>Arava 20mg = Leflun 20mg
+                <li>Arava 20mg = LFM-Leflunomida 20mg
+                <li>Arava 20mg = Reumian 20mg
+                </ul>                        
+                `
+                break
+                case "Arcoxia": res.innerHTML = `
+                <div>
+                <h1> Arcoxia (Etoricoxibe)</h1>
+                <h2>Medicamento controlado</h2> 
+                <p>Medicamento da lista C1 Classe terapêutica: Coxibs (Categoria: Anti-Inflamatório)</p>
+                <h2>Indicações do medicamento</h2>
+                
+                Tratamento da osteoartrite;<br>
+                Tratamento da artrite reumatoide;<br>
+                Tratamento de espondilite anquilosante (inflamação da coluna e de grandes articulações);<br>
+                Alívio da dor;<br>
+                Tratamento de dor aguda após cirurgia dentária;<br>
+                Tratamento de dor aguda após cirurgia ginecológica abdominal.
+                <h2>Contra-indicações </h2>
+                <p>Não use esse medicamento caso seja alérgico a qualquer um de seus componentes, ou tiver histórico de insuficiência cardíaca, ataque cardíaco, cirurgia de revascularização (por exemplo, ponte de safena), dor no peito (angina) estreitamento ou bloqueio de artérias das extremidades do corpo (doença arterial periférica), derrame ou derrame transitório (ataque isquêmico transitório – AIT).</p>
+                </div>
+
+                <ul>
+                 <h1>Referência : Similar</h1>
+                <h4>Comprimido revestido 90mg</h4>
+                <li>Arcoxia 90mg = Hetori 90mg
+                </ul>
+                <ul>
+                <h4>Comprimido revestido 60mg</h4>
+                <li>Arcoxia 60mg = Hetori 60mg
+                </ul>`
+                    break
+                case "Aropax": res.innerHTML = `
+                <div>
+                <h1> Aropax (Cloridrato de paroxetina)</h1>
+                <h2>Medicamento controlado</h2> 
+                <p>Medicamento da lista C1 Classe terapêutica: Anti-Depressivos</p>
+                <h2>Indicações do medicamento</h2>
+                <p>Aropax deve ser usado por ADULTOS que apresentem algumas das situações abaixo:<br>
+                Depressão (mesmo que, anteriormente, outros antidepressivos não tenham sido eficazes);<br>
+                Comportamento obsessivo ou compulsivo (incontrolado);<br>
+                Ataques de pânico, incluindo os causados por fobia de lugares abertos (agorafobia);<br>
+                Sensação de muita ansiedade ou nervosismo, inclusive em situações que exijam contato social;<br>
+                Ansiedade seguida de evento traumático (Transtorno de Estresse Pós-Traumático), por exemplo: acidente com
+                carro, assalto, desastre natural como enchente ou terremoto.<br>
+                Aropax não é indicado para o tratamento de crianças e adolescentes com menos de 18 anos (Veja Uso em crianças e adolescentes menores de 18 anos).</p>
+                <h2>Contra-indicações </h2>
+                <p>Aropax não é indicado para o tratamento de crianças e adolescentes com menos de 18 anos (Veja Uso em crianças e adolescentes menores de 18 anos).</p>
+                <h2>Advertências e precauções</h2>
+                <p>Se você responder sim a qualquer uma das perguntas abaixo, consulte seu médico, pois deverá usar Aropax com cautela.<br>
+                Está fazendo ou fez uso nas últimas 2 semanas de outras drogas antidepressivas chamadas inibidores da monoaminoxidase (IMAO)?<br>
+                Está fazendo uso da medicação tioridazina?<br>
+                Está fazendo uso da medicação pimozida?<br>
+                Apresenta histórico de episódios de mania (hiperatividade ou excitação incontrolável)?<br>
+                Tem problemas no fígado, no coração ou nos rins?<br>
+                Apresenta epilepsia ou já teve um ataque epiléptico (crise convulsiva)?<br>
+                Está grávida, com suspeita de gravidez ou amamentando?<br>
+                Apresenta sintomas como agitação ou mania durante o tratamento?<br>
+                Tem glaucoma (pressão alta nos olhos)?<br>
+                Está em tratamento com medicamentos que aumentam o risco de sangramento?<br>
+                Apresenta esquizofrenia ou utiliza medicamentos para tratar esta condição?<br>
+                Está utilizando alguma outra forma de tratamento antidepressivo?<br>
+                Está em tratamento com eletroconvulsoterapia (ECT)?<br>
+                Pacientes com história de pensamento/ comportamento suicida devem ser cuidadosamente monitorados. Durante o tratamento com terapias antidepressivas o risco de suicídio aumenta no estágio inicial da recuperação. Adultos jovens, especialmente aqueles com transtorno depressivo maior, podem ter um aumento no risco do comportamento suicida durante o tratamento com Aropax. Em caso de dúvida, pergunte a seu médico.</p>
+                </div>
+
+                <ul>
+                 <h1>Referência : Similar</h1>
+                <h4>Comprimido revestido 20mg</h4>
+                <li>Aropax 20mg = Cebrilin 20mg
+                <li>Aropax 20mg = Depaxan 20mg
+                <li>Aropax 20mg = Depond 20mg
+                <li>Aropax 20mg = Haliprex 20mg
+                <li>Aropax 20mg = Moratus 20mg
+                <li>Aropax 20mg = Parox 20mg
+                <li>Aropax 20mg = Paroxiliv 20mg
+                <li>Aropax 20mg = Paxtrat 20mg
+                <li>Aropax 20mg = Praxetina 20mg
+                <li>Aropax 20mg = Pondera 20mg
+                <li>Aropax 20mg = Roxetin 20mg
+                <li>Aropax 20mg = Seroblock 20mg
+                <li>Aropax 20mg = Sertero 20mg
+                <li>Aropax 20mg = Zyparox 20mg
+                </ul>`
+                    break
+                case "Aubagio": res.innerHTML = `
+                <div>
+                <h1> Aubagio (Teriflunomida)</h1>
+                <h2>Medicamento controlado</h2> 
+                <p>Medicamento da lista C1 Classe terapêutica: Produtos para Esclerose Múltipla</p>
+                <h2>Indicações do medicamento</h2>
+                <p>Aubagio está indicado para o tratamento de pacientes com as formas recorrentes de esclerose múltipla (doença neurológica inflamatória crônica, de causa desconhecida), para reduzir a frequência dos surtos e para retardar o acúmulo de incapacidade física.</p>
+                <h2>Contra-indicações </h2>
+                <p>Aubagio está contraindicado em:
+                Paciente com hipersensibilidade (alergia ou intolerância) à teriflunomida, leflunomida ou a qualquer um dos componentes da formulação;<br>
+                Insuficiência hepática grave;<br>
+                Mulheres grávidas, ou mulheres com potencial de engravidar e que não estejam utilizando métodos contraceptivos confiáveis, durante o tratamento com teriflunomida.</p>
+                </div>
+
+                <ul>
+                 <h1>Referência : Similar</h1>
+                 <h4>Comprimido revestido 14mg</h4>
+                <li>Aubagio 14mg = Ryfluna 14mg
+                </ul>`
+                    break
+                }
+
+        }
+    </script>
+
+</body>
+
+</html>

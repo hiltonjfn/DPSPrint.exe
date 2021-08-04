@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipstrips</title>
+    <link rel="stylesheet" href="clipstrips.css">
+</head>
+<body onload="promo(promoex())">
+    <header id="noprint2">
+        Tipo de promoção:
+        <select onclick="promoex()" class="cabesario" name="" id="promoexid">
+            <option value="1">Viva saude</option>
+            <option value="2">APP</option>
+
+        </select>
+        Tamanho da fonte:
+        <input onmousemove="fonte()" type="range" value="29" min="10" max="45" name="" id="fontes">
+          Qual é promoção?
+        <select  onclick="promo(calculo())" autocomplete="on"  name="" id="promoid">
+            <option value="0">Viva Saude</option>
+            <option value="a">APP</option>
+            <option value="3">Leve 4 pague 3</option>
+            <option value="2">Leve 3 pague 2</option>
+            <option value="1">Leve 2 pague 1</option>
+            <option value="b">Leve 3 por menos</option>
+            <option value="c">Leve 2 por menos</option>
+            
+        </select>
+        <input type="button" value="imprimir" onClick="window.print()"/>
+        <input type="button" value="Reset"onClick="document.location.reload(true)">
+        <input type="button" value="Valor Unitario" onClick="dell()"/>
+        
+    </header>
+    
+    <main id="main">
+        
+        <div class="tamanho" id="noprint">
+                <!--Titulo promoção-->
+                <p class="promotiutlo" id="promoexres">Oferta exclusiva:</p>
+                 <!--Nome do produto-->
+                <textarea name="" id="teste" class="nomeproduto" cols="30" rows="10" placeholder="Nome do produto"></textarea>
+                <!--De(texto)-->
+                <div id="detxt" class="detexto">De:R$</div>
+                 <!--De...-->
+                 <div id="rd"></div>
+                 <input onkeyup="calculo()" type="text" maxlength="6" class="devalor" name="dev" id="de"  placeholder="00,00" cols="40" rows="10"  >
+                <!--Por(texto)-->
+                <div class="portexto">Por:R$</div>
+                <!--Por-->
+                <textarea class="porvalor" id="cadasai" placeholder="00,00" name="" id="" cols="40" rows="10" maxlength="6"></textarea>
+                <!--Cada(texto do por)-->
+                <div class="cadatxt">cada.</div>
+                <div >
+                    <img class="carinho" src="img/ct1.png" alt="">
+                    
+                </div>
+                <div class="baixo">
+                    <img class="plt" src="img/plt.png" alt="">
+                    <div class="l3p2" id="promores"></div>
+                    <textarea class="nessapromo" name="" id="res" cols="30" rows="10"></textarea>
+                    <div class="detalhes" id="detalhe"></div>
+            
+                
+                    
+            
+                </div>
+            
+        </div>
+    
+    </main>
+
+    
+
+
+
+    <script>
+       
+        function dell(){
+            var rd = window.document.getElementById("rd")
+            var detxt = window.document.getElementById("detxt")
+
+            de.remove()
+            rd.innerHTML = `<input style="color: transparent;" onkeyup="calculo()" type="text" maxlength="0" class="devalor" name="dev" id="de"  cols="40" rows="10"  >`
+
+            detxt.innerHTML = `<div style="color: transparent;" id="detxt" class="detexto">De:R$</div>`
+            
+        }
+        function fonte(){
+              var font = window.document.getElementById("fontes")
+              var teste = window.document.getElementById("teste")
+              var font = Number(font.value)
+              teste.setAttribute("style", `overflow-y: hidden;width:70mm; height: 35mm; font-size: ${font}px;`)
+        }
+        function promo(){
+            var promoid = window.document.getElementById("promoid")
+            var promores = window.document.getElementById("promores")
+            var promoid = String(promoid.value)   
+            
+            
+            switch (promoid){
+                case "0":
+                promores.innerHTML = '<img src="img/vs.png" alt="" style="width: 235px;margin-top: -10px;margin-left: 15px;">'
+                break
+                case "1": promores.innerHTML = '<img src="img/2x1.png" alt="" style="width: 176px;margin-top: -12px;margin-left: 50px">'
+                
+                break
+                case "2": promores.innerHTML = '<img src="img/3x2.png" alt="" style="width: 176px;margin-top: -12px;margin-left: 50px">'
+                autocomplete="on"                             
+                break
+                
+                case "3": promores.innerHTML = '<img src="img/4x3.png" alt="" style="width: 176px;margin-top: -12px;margin-left: 50px">'
+                break 
+
+                case "b": promores.innerHTML = '<img src="img/pm3.png" alt="" style="width: 200px;margin-top: -10px;margin-left: 60px">'
+                break 
+
+                case "c": promores.innerHTML = '<img src="img/pm2.png" alt="" style="width: 200px;margin-top: -10px;margin-left: 60px">'
+                break 
+                
+                default : promores.innerHTML = '<img src="img/app.png" alt="" style="width: 240px;margin-top: 1px;margin-left: 0px">'
+                break  
+            }
+        }
+        function calculo(){
+        var promoid = window.document.getElementById("promoid")
+        var promoid = Number(promoid.value)
+        var indicado = window.document.getElementById("de")
+        var valor = Number(indicado.value.replace(",", "."))
+        var promoid = promoid || 0
+        var final = valor * promoid
+        var cada = final / (promoid + 1)
+        res.innerText = `Total:R$${final.toFixed(2).replace(".", ",")}` 
+        cadasai.innerText =  `${cada.toFixed(2).replace(".", ",")}`   
+    }
+    function promoex(){
+            var promoexid = window.document.getElementById("promoexid")
+            var promoexres = window.document.getElementById("promoexres")
+            var detalhe = window.document.getElementById("detalhe")
+            var promoexid = Number(promoexid.value)
+            
+
+            
+            switch (promoexid){
+                case 1: promoexres.innerHTML = 'Oferta exclusiva Cliente Viva saude'
+                detalhe.innerHTML = "Ofertas viva saude são descontos exclusivas para clientes cadastrados no programa, caso deseje cadastrar fale com um dos nossos atendentes."
+                
+                break
+                case 2: promoexres.innerHTML = 'Oferta APP Drogaria São Paulo'
+                detalhe.innerHTML = "Ofertas exclusivas para o APP Drogaria São Paulo, baixe agora mesmo no seu play store e aproveite essa e outras promoções."
+                break
+            }
+    }
+    </script>
+</body>
+</html>

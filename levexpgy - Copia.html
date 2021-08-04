@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPSPrint</title>
+    <link rel="stylesheet" href="precos.css">
+</head>
+<body>
+    <!--Começo-->
+    <main onkeyup="calculo()">
+        <img src="cartazes/1.png" alt="">
+
+     <!--Nome do produto-->  
+
+     <textarea class="txtBusca" placeholder="Nome do produto" style="position: absolute;
+            width: 255px; height: 100px;
+            margin-top: 120px;margin-left: -520px; font-size: 3vw; resize: none; color: rgb(0, 0, 0);" name="" id="" cols="40" rows="10" maxlength="22">
+        </textarea>
+
+    <!-- O varlor "De" -->
+    <input onkeyup="calculo()" type="number" class="txtBusca" name="" id="de"  placeholder="00,00" style="position: absolute;
+    width: 70px; height: 25px;
+    margin-top: 150px;margin-left: -220px; font-size: 20px; resize: none; color: rgb(0, 0, 0);" cols="40" rows="10" maxlength="5">
+
+    <!--Valor "Por"-->
+    <textarea class="txtBusca" id="res" placeholder="00,00" style="position: absolute;
+            width: 170px; height: 100px;
+            margin-top: 255px;margin-left: -210px; font-size: 50px; resize: none; color: rgb(255, 255, 255);" name="" id="" cols="40" rows="10" maxlength="5"></textarea>
+   </main>
+
+   <Script>
+    function calculo(){
+        var indicado = window.document.getElementById("de")
+        var valor = Number(indicado.value)
+        var final = valor * 2
+        res.innerText = `${final.toFixed(2)}`       
+    }
+
+
+</Script>
+
+   
+ 
+</body>
+</html>

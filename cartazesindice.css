@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body {
+    background-color: #ededed;
+}
+header{
+    background-color: #242424;
+    border-radius: 10px; 
+    box-shadow: 5px 5px 10px 2px #001530;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+.cubos{
+    background-color: #242424;
+    border-radius: 10px; 
+    box-shadow: 5px 5px 10px 2px #001530;
+    width: 200px;
+    height: 16rem;
+    display: inline-block;
+    margin: 3%;
+}

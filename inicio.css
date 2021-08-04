@@ -1,0 +1,86 @@
+@charset "UTF-8";
+body{
+    margin-top: 0px;
+    background-color: #ededed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+}
+
+.cabecario{
+    background-image: linear-gradient(250deg,#141414,#242424);
+    color: white;
+    height: 100px;
+    border-radius: 10px;
+
+}
+
+header{
+    background-image: linear-gradient(250deg,#141414,#242424);
+    color: white;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 2px #00153080;
+    text-align: center;
+}
+header > div > img{
+    width: 50px;
+    display: inline;
+    margin-top: 5px;
+}
+header > div > h1{
+    width: 50px;
+    display: contents;
+    text-align: center;
+    position: absolute;
+    font-size: 55px;
+}
+
+.caixa {
+
+    background-color: #242424;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    display: -webkit-inline-box;
+    margin: 2%;
+    align-items: center;
+    box-shadow: 5px 5px 10px 2px #00153056;
+    
+
+}
+.icones{
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+}
+p{
+    text-align: center;
+    margin: 0px;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 21px;
+    width: calc(100% - 40px);
+    font-size: 18px;
+
+}
+div:hover{
+    background-color: #444343;
+    border-radius: 10px;
+    
+}
+
+
+

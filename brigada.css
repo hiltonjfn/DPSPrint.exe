@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+@media print {
+body > main > div{ background-color: transparent;}}
+
+@media print {
+    #noprint2 { background-color: transparent;
+        color: rgb(255, 0, 0);   
+                }
+}
+ @media print {.m { width: 100%;margin-left: 3mm;}}
+ @media print {body > main > div.c {background-color: transparent;}}
+ @media print {body > main > div.q {background-color: transparent;}}
+ 
+
+
+@page {
+    margin: 0cm;
+}
+
+
+.config{
+    background-color: black;
+    height: 13mm;
+    width: 180mm;
+    margin: 0px;
+    margin-top: 0px;
+    display: block;
+    
+}
+.quanti{
+    margin: 0px;
+}
+
+body {
+    margin-top: 0mm;
+    margin-left: 13mm;
+    margin-right: 13mm;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+input{
+    margin-top: 11mm;
+    position: absolute;
+    width: 16mm;
+    background-color:transparent;
+    border:none;
+    
+}
+p {
+    margin-top: 11mm;
+    margin-left: 2mm;
+    position: absolute;
+}
+h1{font-size: 2mm;
+   position: absolute;
+   margin-left: 2mm;
+   background-color: black;
+   color: white;
+   border-radius: 1mm;
+   padding: 1mm;
+
+}
+h3{
+    margin-top: 25mm;
+    margin-left: 2mm;
+    position: absolute;
+    font-size: 1.8mm;
+    
+}
+h2{
+    margin-top: 17mm;
+    margin-left: 0mm;
+    position: absolute; 
+    background-color: black;
+    padding: 1mm;
+    color: white;
+    width: 27mm;
+    font-size: 3.9mm;
+    
+}
+
+
+
+div{
+    background-color: #0554F2;
+    width: 29mm;
+    height: 29mm;
+    display: inline-block;
+    margin: 0mm;
+    border: 1px;
+
+}
+.config{
+    background-color: black;
+ 
+    height: 13mm;
+    width: 75mm;
+    margin: 0px;
+    margin-top: 0px;
+    display: block;
+    border-radius: 20px;  
+    margin-left: 32%;
+    
+}
+.reduzir{
+    position: absolute;
+    background-color: #BF9517;
+    margin-top: 2px;   
+    color: white;
+    margin-left: 50px;
+}
+.reset{
+    position: absolute;
+    background-color: #BF9517;
+    margin-top: 2px; 
+    margin-left: 120px;  
+    color: white;
+}
+.imprimir{
+    position: absolute;
+    background-color: #BF9517;
+    margin-top: 2px; 
+    margin-left: 188px; 
+    color: white; 
+}
+body > main{
+    width: 700px;
+    margin-left: 15%;
+    text-align: center;
+
+}
+.c{
+    background-color: #F20530;
+}
+.q{
+    background-color: #F2B705;
+}
+

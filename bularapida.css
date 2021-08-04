@@ -1,0 +1,30 @@
+@charset "UTF-8";
+body{
+    background-color: #E9F1F2;
+}
+body > div > ul {
+    background-color: #5EBFBF;
+    width: 400px;
+    border-radius: 10px;
+    display: block;
+    
+}
+body > div >div {
+    border-radius: 10px;
+    text-align: center;
+    width: 700px;
+    display: inline-block;
+    position: absolute;
+    background-color: #D0D8D9;
+    margin-left: 500px;
+    
+}
+p{
+    display: inline-block;
+}
+h4{
+    margin: 5px;
+}
+img{
+    width: 200px;
+}

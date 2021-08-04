@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+body {
+    background-color: #ededed;
+    font-family: Trebuchet MS;
+    display: inline-grid;  
+      
+}
+.a{
+    text-decoration: none;
+    display: inline-grid;
+}
+.barra {
+    background-color: #242424;
+    border-radius: 10px; 
+    box-shadow: 5px 5px 10px 2px #001530;
+    width: 1300px;
+    padding: 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    
+}
+#segunda {margin-left: 20px;}
+
+
+div:hover{ 
+    background-color: #4e4e4e;
+   
+    }
+
+.janela {
+    background-color: #242424;
+    border-radius: 10px; 
+    box-shadow: 5px 5px 10px 2px #001530;
+    width: 200px;
+    height: 300px; 
+    padding: 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    
+
+    
+    }
+.popinfo {
+    background-color: #242424;
+    border-radius: 10px; 
+    box-shadow: 5px 5px 10px 2px #001530;
+    padding: 15px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: inline-block; 
+    margin-top: 20px;
+    
+
+    
+}
+
