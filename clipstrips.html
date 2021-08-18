@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clipstrips</title>
-    <link rel="stylesheet" href="CSS/clipstrips.css">
+    <title>Gondolas</title>
+    <link rel="stylesheet" href="CSS/cartaz.css">
 </head>
-
-<body id="body" onload="promo(promoex())">
+<body onload="promo()">
     <header id="noprint2">
         Tipo de promoção:
         <select onclick="promoex()" class="cabesario" name="" id="promoexid">
-            <option value="1">Viva Saude</option>
+            <option value="0">Escolha uma opção</option>
+            <option value="1">Viva saude</option>
             <option value="2">APP</option>
 
         </select>
         Tamanho da fonte:
-        <input onmousemove="fonte()" type="range" value="29" min="10" max="50" name="" id="fontes">
+        <input onmousemove="fonte()" type="range" value="29" min="10" max="85" name="" id="fontes">
           Qual é promoção?
         <select  onclick="promo(calculo())" autocomplete="on"  name="" id="promoid">
             <option value="0">Viva Saude</option>
@@ -25,18 +25,13 @@
             <option value="3">Leve 4 pague 3</option>
             <option value="2">Leve 3 pague 2</option>
             <option value="1">Leve 2 pague 1</option>
-            <option value="b">Leve 3 por menos</option>
-            <option value="c">Leve 2 por menos</option>
-            
         </select>
         <input type="button" value="imprimir" onClick="window.print()"/>
         <input type="button" value="Reset"onClick="document.location.reload(true)">
-        <input type="button" value="Valor Unitario" onClick="dell()"/>
-        
         
     </header>
     <img id="noprint2" src="img/backDspL.png" alt="">
-    <main id="main">
+    <main>
         
         <div class="tamanho" id="noprint">
                 <!--Titulo promoção-->
@@ -44,28 +39,23 @@
                  <!--Nome do produto-->
                 <textarea name="" id="teste" class="nomeproduto" cols="30" rows="10" placeholder="Nome do produto"></textarea>
                 <!--De(texto)-->
-                <div id="detxt" class="detexto">De:R$</div>
+                <div class="detexto">De:R$</div>
                  <!--De...-->
-                 <div id="rd"></div>
-                 <input onkeyup="calculo()" type="text" maxlength="6" class="devalor" name="dev" id="de"  placeholder="00,00" cols="40" rows="10"  >
+                 <input onkeyup="calculo()" type="text" maxlength="6" class="devalor" name="" id="de"  placeholder="00,00" cols="40" rows="10"  >
                 <!--Por(texto)-->
                 <div class="portexto">Por:R$</div>
                 <!--Por-->
                 <textarea class="porvalor" id="cadasai" placeholder="00,00" name="" id="" cols="40" rows="10" maxlength="6"></textarea>
                 <!--Cada(texto do por)-->
                 <div class="cadatxt">cada.</div>
-                <div >
-                    <img class="carinho" src="img/ct1.png" alt="">
-                    
-                </div>
                 <div class="baixo">
-                    <img class="plt" src="img/plt.png" alt="">
                     <div class="l3p2" id="promores"></div>
                     <textarea class="nessapromo" name="" id="res" cols="30" rows="10"></textarea>
                     <div class="detalhes" id="detalhe"></div>
             
-                
-                    
+            
+            
+            
             
                 </div>
             
@@ -79,52 +69,32 @@
 
     </footer>
 
-
     <script>
-       
-        function dell(){
-            var rd = window.document.getElementById("rd")
-            var detxt = window.document.getElementById("detxt")
-
-            de.remove()
-            rd.innerHTML = `<input style="color: transparent;" onkeyup="calculo()" type="text" maxlength="0" class="devalor" name="dev" id="de"  cols="40" rows="10"  >`
-
-            detxt.innerHTML = `<div style="color: transparent;" id="detxt" class="detexto">De:R$</div>`
-            
-        }
         function fonte(){
               var font = window.document.getElementById("fontes")
               var teste = window.document.getElementById("teste")
               var font = Number(font.value)
-              teste.setAttribute("style", `overflow-y: hidden;width:70mm; height: 35mm; font-size: ${font}px;`)
+              teste.setAttribute("style", `width:130mm; height: 90mm; font-size: ${font}px;`)
         }
         function promo(){
             var promoid = window.document.getElementById("promoid")
             var promores = window.document.getElementById("promores")
-            var promoid = String(promoid.value)   
+            var promoid = Number(promoid.value)
             
             
             switch (promoid){
-                case "0":
-                promores.innerHTML = '<img src="img/vs.png" alt="" style="width: 205px;margin-top: -10px;margin-left: 43px;">'
+                case 0: promores.innerHTML = '<img src="vs.png" alt=""  style="width: 500px; margin-top: 16px;">'
                 break
-                case "1": promores.innerHTML = '<img src="img/2x1.png" alt="" style="width: 172px;margin-top: -10px;margin-left: 68px">'
+                case 1: promores.innerHTML = '<img src="2x1.png" alt="" style="width: 459px;margin-top: -10px;">'
                 
                 break
-                case "2": promores.innerHTML = '<img src="img/3x2.png" alt="" style="width: 172px;margin-top: -10px;margin-left: 68px">'
+                case 2: promores.innerHTML = '<img src="3x2.png" alt="" style="width: 459px;margin-top: -10px;">'
                 autocomplete="on"                             
                 break
                 
-                case "3": promores.innerHTML = '<img src="img/4x3.png" alt="" style="width: 172px;margin-top: -10px;margin-left: 68px">'
+                case 3: promores.innerHTML = '<img src="4x3.png" alt="" style="width: 459px;margin-top: -10px;">'
                 break 
-
-                case "b": promores.innerHTML = '<img src="img/pm3.png" alt="" style="width: 180px;margin-top: -10px;margin-left: 79px">'
-                break 
-
-                case "c": promores.innerHTML = '<img src="img/pm2.png" alt="" style="width: 180px;margin-top: -10px;margin-left: 79px">'
-                break 
-                
-                default : promores.innerHTML = '<img src="img/app.png" alt="" style="width: 185px;margin-top: 1px;margin-left: 70px">'
+                default : promores.innerHTML = '<img src="app.png" alt="" style="width: 500px; margin-top: 16px;">'
                 break  
             }
         }
@@ -133,18 +103,16 @@
         var promoid = Number(promoid.value)
         var indicado = window.document.getElementById("de")
         var valor = Number(indicado.value.replace(",", "."))
-        var promoid = promoid || 0
         var final = valor * promoid
         var cada = final / (promoid + 1)
         res.innerText = `Total:R$${final.toFixed(2).replace(".", ",")}` 
-        cadasai.innerText =  `${cada.toFixed(2).replace(".", ",")}`   
+        cadasai.innerHTML =  `${cada.toFixed(2).replace(".", ",")}`   
     }
     function promoex(){
             var promoexid = window.document.getElementById("promoexid")
             var promoexres = window.document.getElementById("promoexres")
             var detalhe = window.document.getElementById("detalhe")
             var promoexid = Number(promoexid.value)
-            
 
             
             switch (promoexid){
