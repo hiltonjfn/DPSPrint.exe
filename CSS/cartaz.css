@@ -1,0 +1,206 @@
+@charset "UTF-8";
+@media print { body > main {margin-left: 0px;transform: scale(1);}
+    #noprint { background-color: transparent;
+        border-style: dashed;
+    }    
+}
+@media print {
+    #noprint2 { background-color: transparent;
+        border-style: dashed; 
+        display: none;
+ }     
+}
+@page {
+    margin: 0cm;
+    }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #BEC7C7;
+    margin: 0px;
+}
+.tamanho{
+    width: 245mm;
+    height: 195mm;
+    background-color: gold;
+    border-radius: 10px;   
+
+    
+    
+}
+
+header{
+    background-color: #242424;
+    border-radius: 0px 0px 10px 10px; 
+    box-shadow: 5px 5px 10px 2px #0015305e;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Trebuchet MS; 
+    margin-left: 19%;
+}
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+input{
+    font-weight: 900;
+}
+.cartaz{
+    border-radius: 10px;
+    background-color: gold;
+    text-align: center;
+    
+}
+.promotiutlo{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0px;
+    padding: 17px;
+    
+}
+.nomeproduto{
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 29px;
+    border: none;
+    width: 130mm;
+    height: 90mm;
+    resize: none;
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+    margin-top: 10px;
+    position: absolute;
+}
+  .baixo{
+    background-color: black;
+    color: white;
+    height: 65mm;
+    margin-top: 434px;
+    border-radius: 0px 0px 10px 10px;
+      
+  }
+.l3p2{
+    color: white;
+    position: absolute;
+    text-align: left;
+    font-size: 60px;
+    padding: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.txtBusca{
+    position: absolute;
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:260px;
+    
+  }
+.nessapromo{
+    color: white;
+    position: absolute;
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 20px;
+    border: none;
+    height: 46px;
+    width: 193px;
+    resize: none;
+    margin-left: 645px;
+}
+.detexto{
+    position: absolute;
+    margin-left: 589px;
+    margin-top: 5mm;
+    font-size: 20px;
+
+}
+.devalor{
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    margin-left: 582px;
+    margin-top: 41px;
+    width: 241px;
+    height: 85px;
+    font-size: 64px;
+}
+.portexto{
+    position: absolute;
+    margin-left: 512px;
+    margin-top: 210px;
+    font-size: 44px;
+}
+.porvalor{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    width: 423px;
+    height: 180px;
+    margin-left: 501px;
+    margin-top: 252px;
+    font-size: 109px;
+    resize: none;
+}
+.cadatxt{
+    position: absolute;
+    margin-left: 822px;
+    margin-top: 385px;
+    font-size: 40px;
+
+
+}
+.detalhes{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    border: none;
+    width: 322px;
+    height: 150px;
+    margin-top: 139px;
+    margin-left: 566px;
+    font-size: 16px;
+    resize: none;
+}
+main{
+    transform: scale(0.6);
+    width: 140mm;
+    height: 90mm;
+    margin-top: -2%;
+    margin-left: 20%;
+    position: absolute;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 21px;
+    width: calc(100% - 40px);
+    font-size: 18px;
+
+}
+img{
+    position: absolute;
+    width: 100%;
+    margin-top: -10px;
+    
+}
+
